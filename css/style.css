@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fafafa;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* unvisited link */
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+p{
+    margin: 12px 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    height: 100%;
+}
+
+.header{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    top: 0;
+    position: fixed;
+    background-color: white;
+}
+
+.nav{
+    height: 100%;
+    width: 80%;
+    
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav > ul li{
+    font-size: 16px;
+    padding: 25px 20px 25px 20px;
+    font-family: 'Fira Sans', sans-serif;
+    user-select: none;
+}
+
+.nav > ul li:hover{
+    background-color: rgba(91, 151, 147);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.selected{
+    background-color: #9FD5D1;
+    color: white;
+    cursor: pointer;
+}
+
+.selected:hover{
+    background-color: #9FD5D1 !important;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    place-content: center;
+}
+
+.round{
+    border-radius: 30px;
+    background-color: #9FD5D1;
+    color: rgb(255, 255, 255);
+    font-size: 14px !important;
+    height: 50% !important;
+    padding: 7px 20px 7px 20px !important;
+    margin-left: 20px; 
+}
+
+.round:hover{
+    background-color: rgb(91, 151, 147) !important;
+}
+
+.content{
+    margin-bottom: 50px;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.InitialImage{
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.title{
+    font-size: 34px;
+    color: #9FD5D1;
+    margin-bottom: 30px;
+    font-family: 'Gentium Basic', serif;
+}
+
+.text{
+    text-align: justify;
+    font-family: 'Montserrat', serif;
+    color: #898989;
+    font-size: 13px;
+}
+
+.text h3{
+    color: #5f5f5f;
+}
+
+
+textarea{
+    resize: none;
+}
+
+.contactForm{
+    width: 100%;
+    text-align: center;
+}
+
+.contactForm form{
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+}
+
+.contactForm form label{
+    width: 50%;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.formElement{
+    margin: 20px 0;
+}
+
+input, textarea{
+    width: 50%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: grey;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 3px;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid #17a2b8;
+}
+
+textarea{
+    height: 150px;
+    padding-top: 5px;
+}
+
+.submit-btn{
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    width: calc(50% + 10px);
+}
+
+.submit-btn:hover{
+    background-color: #43afc0;
+    cursor: pointer;
+}
+
+.info{
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.infotop {
+    font-size: 24px;
+    text-align: left;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 20px;
+    text-align: center;
+    color: #17a2b8;
+    font-weight: 600;
+}
+
+.infobottom{
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+.infobottom h3{
+    color: #17a2b8;
+    font-weight: 300;
+}
+
+.infobottom div{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MEDIA QUERY */ 
+@media only screen and (max-width: 800px) {
+
+    .nav > ul li{
+        font-size: 14px;
+        padding: 15px;    
+        width: 12%;
+        white-space: nowrap;
+    }
+    .round{
+        padding: 8px 15px 7px 15px !important;
+        width: 12%;
+        font-size: 10px !important;
+        margin-left: 5px;
+    }
+    .content{
+        width: 90%;
+    }
+    .text{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav > ul li{
+        font-size: 10px;
+        padding: 10px;    
+        width: 12%;
+        white-space: nowrap;
+    }
+    .round{
+        padding: 5px 10px 4px 10px !important;
+        width: 12%;
+        font-size: 8px !important;
+        margin-left: 5px;
+    }
+    .title{
+        font-size: 20px;
+    }
+  }
